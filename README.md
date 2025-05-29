@@ -17,10 +17,10 @@ This is a web-based brain tumor detection application that allows users to uploa
 ## 🧠 Model Details
 
 - **Architecture**: EfficientNetB2
-- **Input Shape**: `(260, 260, 3)`
+- **Input Shape**: `(224, 224, 3)`
 - **Layers**:
   - GlobalMaxPooling2D
-  - Dropout
+  - Dropout (rate = 0.2)
   - Dense layer with sigmoid activation
 - **Output**: Binary classification (Tumor / No Tumor)
 - **Frameworks**: TensorFlow / Keras
