@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: brain-tumor-detection
+    env: python
+    buildCommand: ""
+    startCommand: python web_app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
