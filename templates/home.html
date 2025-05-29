@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brain Tumor Detection</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Brain Tumor Detection</h1>
+      <p style="text-align: center">
+        Upload an MRI scan to detect the presence of a brain tumor.
+      </p>
+
+      <!-- Upload section -->
+      <form
+        action="/predict"
+        method="post"
+        enctype="multipart/form-data"
+        id="uploadForm"
+      >
+        <div class="upload-section">
+          <label class="upload-label" for="imageUpload"> Choose File </label>
+          <div class="custom-file-input">
+            <input
+              type="file"
+              name="file"
+              id="imageUpload"
+              accept="image/*"
+              required
+            />
+          </div>
+          <div id="file-name" class="file-selected"></div>
+
+          <!-- Preview area -->
+          <div class="image-preview" id="imagePreview"></div>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" id="detectBtn">Detect</button>
+      </form>
+
+      <!-- Loading text -->
+      <div id="loading" class="loading" style="display: none">
+        Processing...
+      </div>
+
+      <!-- Prediction result -->
+      <div class="result">{{ prediction_text }}</div>
+    </div>
+
+    <!-- Script for file preview and file name -->
+    <script>
+      document
+        .getElementById("imageUpload")
+        .addEventListener("change", function (event) {
+          let file = event.target.files[0];
+          let previewDiv = document.getElementById("imagePreview");
+          let fileNameDiv = document.getElementById("file-name");
+
+          if (file) {
+            let reader = new FileReader();
+            reader.onload = function (e) {
+              let imgElement = document.createElement("img");
+              imgElement.src = e.target.result;
+              imgElement.className = "preview-img";
+              previewDiv.innerHTML = "";
+              previewDiv.appendChild(imgElement);
+            };
+            reader.readAsDataURL(file);
+            fileNameDiv.textContent = "Selected File: " + file.name;
+          } else {
+            previewDiv.innerHTML = "";
+            fileNameDiv.textContent = "";
+          }
+        });
+    </script>
+  </body>
+</html>
