@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
+import os
 
 app = Flask(__name__)
 
@@ -29,5 +30,5 @@ def predict():
 
     return render_template("home.html", prediction_text=result)
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=10000)
+if __name__ == "__main__":
+    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
