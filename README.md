@@ -56,7 +56,7 @@ brain-tumor-detection/
    ```
 3. **Run the app:**
    ```bash
-   python app.py
+   python web_app.py
    ```
 4. **Open your browser and go to:**
    ```bash
