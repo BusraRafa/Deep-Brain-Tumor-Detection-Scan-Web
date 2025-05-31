@@ -1,6 +1,16 @@
 # 🧠 Brain Tumor Detection Web App
 
 This is a web-based brain tumor detection application that allows users to upload MRI images and get predictions using a deep learning model trained on brain tumor data.
+## 📊 Dataset 
+```bash
+https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection/data
+```
+##  About Dataset Structure
+
+| Folder | Description | Number of Images |
+|---|---|---|
+| `yes` | Contains **tumorous** Brain MRI Images. | 1500 |
+| `no` | Contains **non-tumorous** Brain MRI Images. | 1500 |
 
 ## 🚀 Live Demo
 > Coming soon (once deployed on Vercel)
