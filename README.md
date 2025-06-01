@@ -1,6 +1,16 @@
 # 🧠 Brain Tumor Detection Web App
 
 This is a web-based brain tumor detection application that allows users to upload MRI images and get predictions using a deep learning model trained on brain tumor data.
+## 📊 Dataset 
+```bash
+https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection/data
+```
+##  About Dataset Structure
+
+| Folder | Description | Number of Images |
+|---|---|---|
+| `yes` | Contains **tumorous** Brain MRI Images. | 1500 |
+| `no` | Contains **non-tumorous** Brain MRI Images. | 1500 |
 
 ## 🚀 Live Demo
 > Coming soon (once deployed on Vercel)
@@ -50,15 +60,21 @@ brain-tumor-detection/
    git clone https://github.com/your-username/brain-tumor-detection.git
    cd brain-tumor-detection
    ```
-2. **Install dependencies:**
+2.**create the virtual environment:**
+  ```bash
+   python -m venv venv
+   source venv/bin/activate  # For Linux/macOS
+   venv\Scripts\activate     # For Windows
+```
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-3. **Run the app:**
+4. **Run the app:**
    ```bash
-   python app.py
+   python web_app.py
    ```
-4. **Open your browser and go to:**
+5. **Open your browser and go to:**
    ```bash
    http://127.0.0.1:5000/
    ```
