@@ -60,12 +60,12 @@ brain-tumor-detection/
    git clone https://github.com/your-username/brain-tumor-detection.git
    cd brain-tumor-detection
    ```
-2.**create the virtual environment:**
-  ```bash
+2. **create the virtual environment:**
+   ```bash
    python -m venv venv
    source venv/bin/activate  # For Linux/macOS
    venv\Scripts\activate     # For Windows
-```
+   ```
 3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
