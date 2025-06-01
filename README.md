@@ -60,15 +60,21 @@ brain-tumor-detection/
    git clone https://github.com/your-username/brain-tumor-detection.git
    cd brain-tumor-detection
    ```
-2. **Install dependencies:**
+2.**create the virtual environment:**
+  ```bash
+   python -m venv venv
+   source venv/bin/activate  # For Linux/macOS
+   venv\Scripts\activate     # For Windows
+```
+3. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-3. **Run the app:**
+4. **Run the app:**
    ```bash
    python web_app.py
    ```
-4. **Open your browser and go to:**
+5. **Open your browser and go to:**
    ```bash
    http://127.0.0.1:5000/
    ```
