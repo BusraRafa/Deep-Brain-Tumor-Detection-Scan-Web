@@ -6,7 +6,7 @@ import io
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model("model/xception_brain_tumor_model.h5")
+model = tf.keras.models.load_model("model/xception_brain_tumor_model_v3.h5")
 print("Model output shape:", model.output_shape)
 
 @app.route("/")
@@ -25,7 +25,7 @@ def predict():
 
     prediction = model.predict(img_array)[0][0]
     print("Raw prediction:", prediction)
-    result = "Brain Tumor Detected" if prediction >= 0.5 else "No Brain Tumor Detected"
+    result = "Brain Tumor Detected" if prediction >= 0.54 else "No Brain Tumor Detected"
 
     return render_template("home.html", prediction_text=result)
 
