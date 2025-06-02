@@ -44,7 +44,7 @@ https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection/data
 ```
 ---
 
-## 🧠 Model Development
+## 🎯 Model Development
 
 Trained and compared four different CNN architectures:
 ```bash
