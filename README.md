@@ -24,16 +24,36 @@ https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection/data
 - Clean and user-friendly web design
 - Responsive and fast prediction
 
-## 🧠 Model Details
+## 🛠️ Preprocessing Pipeline
 
-- **Architecture**: EfficientNetB2
-- **Input Shape**: `(224, 224, 3)`
-- **Layers**:
-  - GlobalMaxPooling2D
-  - Dropout (rate = 0.2)
-  - Dense layer with sigmoid activation
-- **Output**: Binary classification (Tumor / No Tumor)
-- **Frameworks**: TensorFlow / Keras
+## 🔀 Data Split — 3,000 MRI Images
+``` bash
+-  Train:         ───────────────      66.7% (2,000 Images)
+-  Validation:    ────────             20.0% (600 Images) 
+-  Test:          ──────               13.3% (400 Images) 
+```
+---
+
+## ⚙️ Preprocessing Steps
+``` bash
+- Cropping around brain region (contour-based)
+- Image resizing to (224, 224)
+- Normalization
+- Data augmentation (rotation, zoom, flip, etc.)
+- Final folders: `TRAIN_CROP/`, `VAL_CROP/`, `TEST_CROP/`
+```
+---
+
+## 🧠 Model Development
+
+Trained and compared four different CNN architectures:
+```bash
+- DenseNet169 – 97.0% accuracy
+- EfficientNetB2 - 98.75%   (used in the final app)
+- InceptionResNetV2 – 99.5% accuracy
+- Xception – 98.0% accuracy
+```
+
 
 ## 🗂️ Project Structure
 ```bash
