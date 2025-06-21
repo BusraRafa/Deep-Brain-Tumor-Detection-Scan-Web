@@ -68,7 +68,8 @@ brain-tumor-detection/
 │ └── brain_tumor_model.h5 
 │
 ├── web_app.py 
-├── requirements.txt 
+├── requirements.txt
+├── render.yaml
 ├── README.md
 └── .gitignore
 ```
